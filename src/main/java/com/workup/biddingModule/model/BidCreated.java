@@ -20,13 +20,13 @@ public class BidCreated {
     private double maxAmount;
     private String address;
     private String additionalNotes;
-    private Map<String, String> imageIds;
+    private Map<String, ImageData> image;
 
     // Constructors
     public BidCreated() {}
 
     public BidCreated(LocalDateTime startBidTime, LocalDateTime endBidTime, LocalDateTime serviceTime,
-                      String category, String description, double maxAmount, String address, String additionalNotes, Map<String, String> imageIds) {
+                      String category, String description, double maxAmount, String address, String additionalNotes, Map<String, ImageData> image) {
         this.startBidTime = startBidTime;
         this.endBidTime = endBidTime;
         this.serviceTime = serviceTime;
@@ -36,7 +36,7 @@ public class BidCreated {
         this.address = address;
         this.additionalNotes = additionalNotes;
 
-        this.imageIds = imageIds != null ? imageIds : new HashMap<>();
+        this.image = image != null ? image : new HashMap<>();
     }
 
     // Getters and Setters
@@ -67,8 +67,7 @@ public class BidCreated {
     public String getAdditionalNotes() { return additionalNotes; }
     public void setAdditionalNotes(String additionalNotes) { this.additionalNotes = additionalNotes; }
 
-    public Map<String, String> getImageIds() { return imageIds; }
-    public void setImageIds(Map<String, String> imageIds) { this.imageIds = imageIds; 
-    }
+    public Map<String, ImageData> getImage() { return image; }
+    public void setImage(Map<String, ImageData> image) { this.image = image; }
 
 }
