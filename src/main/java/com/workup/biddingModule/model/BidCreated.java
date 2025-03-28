@@ -1,6 +1,8 @@
 package com.workup.biddingModule.model;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,12 +20,13 @@ public class BidCreated {
     private double maxAmount;
     private String address;
     private String additionalNotes;
+    private Map<String, String> imageIds;
 
     // Constructors
     public BidCreated() {}
 
     public BidCreated(LocalDateTime startBidTime, LocalDateTime endBidTime, LocalDateTime serviceTime,
-                      String category, String description, double maxAmount, String address, String additionalNotes) {
+                      String category, String description, double maxAmount, String address, String additionalNotes, Map<String, String> imageIds) {
         this.startBidTime = startBidTime;
         this.endBidTime = endBidTime;
         this.serviceTime = serviceTime;
@@ -32,6 +35,8 @@ public class BidCreated {
         this.maxAmount = maxAmount;
         this.address = address;
         this.additionalNotes = additionalNotes;
+
+        this.imageIds = imageIds != null ? imageIds : new HashMap<>();
     }
 
     // Getters and Setters
@@ -61,4 +66,9 @@ public class BidCreated {
 
     public String getAdditionalNotes() { return additionalNotes; }
     public void setAdditionalNotes(String additionalNotes) { this.additionalNotes = additionalNotes; }
+
+    public Map<String, String> getImageIds() { return imageIds; }
+    public void setImageIds(Map<String, String> imageIds) { this.imageIds = imageIds; 
+    }
+
 }
