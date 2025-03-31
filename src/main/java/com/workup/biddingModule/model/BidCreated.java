@@ -9,9 +9,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "BidCreated")
 public class BidCreated {
-    
     @Id
-    private String id;
+    private String bidId;
+    private String serviceProviderid;
     private LocalDateTime startBidTime;
     private LocalDateTime endBidTime;
     private LocalDateTime serviceTime;
@@ -21,13 +21,15 @@ public class BidCreated {
     private String address;
     private String additionalNotes;
     private Map<String, ImageData> image;
+    private String status;
 
     // Constructors
     public BidCreated() {}
 
-    public BidCreated(LocalDateTime startBidTime, LocalDateTime endBidTime, LocalDateTime serviceTime,
+    public BidCreated(String serviceProviderid, LocalDateTime startBidTime, LocalDateTime endBidTime, LocalDateTime serviceTime,
                       String category, String description, double maxAmount, String address, String additionalNotes, Map<String, ImageData> image) {
-        this.startBidTime = startBidTime;
+        this.serviceProviderid = serviceProviderid;
+                        this.startBidTime = startBidTime;
         this.endBidTime = endBidTime;
         this.serviceTime = serviceTime;
         this.category = category;
@@ -40,8 +42,11 @@ public class BidCreated {
     }
 
     // Getters and Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public String getId() { return bidId; }
+    public void setId(String id) { this.bidId = bidId; }
+
+    public String getServiceProviderId() { return serviceProviderid; }
+    public void setServiceProviderId(String id) { this.serviceProviderid = serviceProviderid; }
 
     public LocalDateTime getStartBidTime() { return startBidTime; }
     public void setStartBidTime(LocalDateTime startBidTime) { this.startBidTime = startBidTime; }
