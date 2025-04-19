@@ -24,6 +24,16 @@ public class BiddedController {
     @Autowired
     private BiddedService biddedService;
 
+    // 6. Get all bids by bidId
+    @GetMapping("/bid/{bidId}")
+    public ResponseEntity<List<Bidded>> getBidsByBidId(@PathVariable String bidId) {
+        List<Bidded> bids = biddedService.getBidsByBidId(bidId);
+        if (bids.isEmpty()) {
+            return ResponseEntity.noContent().build();  // No bids for this bidId
+        }
+        return ResponseEntity.ok(bids);
+    }
+
     // 1. Create a new bid
     @PostMapping
     public ResponseEntity<Bidded> createBid(@RequestBody Bidded bid) {
