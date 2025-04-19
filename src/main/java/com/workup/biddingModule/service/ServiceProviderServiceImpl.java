@@ -1,14 +1,11 @@
 package com.workup.biddingModule.service;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
 import com.workup.biddingModule.dto.ServiceProviderRegistrationDTO;
 import com.workup.biddingModule.model.ServiceProvider;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.workup.biddingModule.dto.ServiceProviderLoginDTO;
 import com.workup.biddingModule.repository.ServiceProviderRepository;
@@ -17,7 +14,7 @@ import com.workup.biddingModule.repository.ServiceProviderRepository;
 public class ServiceProviderServiceImpl implements ServiceProviderService {
 
     private final ServiceProviderRepository repository;
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    // private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     public ServiceProviderServiceImpl(ServiceProviderRepository repository) {
         this.repository = repository;
@@ -30,7 +27,7 @@ public class ServiceProviderServiceImpl implements ServiceProviderService {
         provider.setMiddleName(dto.getMiddleName());
         provider.setLastName(dto.getLastName());
         provider.setEmail(dto.getEmail());
-        provider.setPassword(passwordEncoder.encode(dto.getPassword()));
+        // provider.setPassword(passwordEncoder.encode(dto.getPassword()));
         provider.setPhoneNumber(dto.getPhoneNumber());
         provider.setImgURL(dto.getImgURL());
         provider.setImgPublicId(dto.getImgPublicId());
@@ -49,7 +46,7 @@ public class ServiceProviderServiceImpl implements ServiceProviderService {
     @Override
     public ServiceProvider login(ServiceProviderLoginDTO dto) {
         return repository.findByEmail(dto.getEmail())
-                .filter(provider -> passwordEncoder.matches(dto.getPassword(), provider.getPassword()))
+                // .filter(provider -> passwordEncoder.matches(dto.getPassword(), provider.getPassword()))
                 .orElseThrow(() -> new RuntimeException("Invalid email or password"));
     }
 }
