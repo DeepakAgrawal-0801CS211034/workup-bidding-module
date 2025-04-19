@@ -7,8 +7,10 @@ import java.time.LocalDateTime;
 
 import com.workup.biddingModule.dto.ServiceProviderRegistrationDTO;
 import com.workup.biddingModule.model.ServiceProvider;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.workup.biddingModule.dto.ServiceProviderLoginDTO;
 import com.workup.biddingModule.repository.ServiceProviderRepository;
 
 @Service
