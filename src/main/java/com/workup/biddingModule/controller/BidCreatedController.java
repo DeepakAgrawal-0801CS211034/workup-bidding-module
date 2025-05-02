@@ -82,6 +82,11 @@ public class BidCreatedController {
         return new ResponseEntity<>(bids, HttpStatus.OK);
     }
 
+    @GetMapping("/country/state/city")
+    public List<BidCreated> getFilteredBids() {
+        return bidCreatedService.getBidsByCountryStateCity();
+    }
+    
     // 3. Get bid by ID
     @GetMapping("/bid/{bidId}")
     public ResponseEntity<BidCreated> getBidById(@PathVariable String bidId) {
