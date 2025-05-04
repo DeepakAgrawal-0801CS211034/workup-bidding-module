@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -82,10 +83,15 @@ public class BidCreatedController {
         return new ResponseEntity<>(bids, HttpStatus.OK);
     }
 
-    @GetMapping("/country/state/city")
-    public List<BidCreated> getFilteredBids() {
-        return bidCreatedService.getBidsByCountryStateCity();
+
+    @GetMapping("/filter")
+    public List<BidCreated> getFilteredBids(
+            @RequestParam(required = false) String country,
+            @RequestParam(required = false) String state,
+            @RequestParam(required = false) String city) {
+        return bidCreatedService.getBidsByCountryStateCity(country, state, city);
     }
+
     
     // 3. Get bid by ID
     @GetMapping("/bid/{bidId}")
