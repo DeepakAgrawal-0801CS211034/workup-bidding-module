@@ -4,9 +4,20 @@ WorkUp is a full-stack application that connects customers with local service pr
 
 ![WorkUp Banner](assets/banner.png) <!-- Optional image if available -->
 
-<img src="./screenshots/allCategories.jpg" alt="App Screenshot" width="300" height="600">
+<img src="./screenshots/allCategories.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/logincustomer.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/loginserviceprovider.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/bidDetail.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/bidding.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/bidding1.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/bidding2.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/orderhistory.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/profile.jpg" alt="App Screenshot" width="300" height="550">
+<img src="./screenshots/selectdate.jpg" alt="App Screenshot" width="300" height="550">
 
-![App Screenshot](./screenshots/allCategories.jpg)
+
+
+<!-- ![App Screenshot](./screenshots/allCategories.jpg)
 ![App Screenshot](./screenshots/bidDetail.jpg)
 ![App Screenshot](./screenshots/bidding.jpg)
 ![Screenshot](./screenshots/bidding1.jpg)
@@ -16,7 +27,7 @@ WorkUp is a full-stack application that connects customers with local service pr
 ![Screenshot](./screenshots/orderhistory.jpg)
 ![Screenshot](./screenshots/place%20order.jpg)
 ![Screenshot](./screenshots/profile.jpg)
-![Screenshot](./screenshots/selectdate.jpg)
+![Screenshot](./screenshots/selectdate.jpg) -->
 
 
 
