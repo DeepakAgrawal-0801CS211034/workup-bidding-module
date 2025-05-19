@@ -4,6 +4,8 @@ WorkUp is a full-stack application that connects customers with local service pr
 
 ![WorkUp Banner](assets/banner.png) <!-- Optional image if available -->
 
+<img src="./screenshots/allCategories.jpg" alt="App Screenshot" width="414" height="896">
+
 ![App Screenshot](./screenshots/allCategories.jpg)
 ![App Screenshot](./screenshots/bidDetail.jpg)
 ![App Screenshot](./screenshots/bidding.jpg)
