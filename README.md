@@ -4,6 +4,24 @@ WorkUp is a full-stack application that connects customers with local service pr
 
 ![WorkUp Banner](assets/banner.png) <!-- Optional image if available -->
 
+![Screenshot](./screenshots/allCategories.jpg)
+![Screenshot](./screenshots/bidDetail.jpg)
+![Screenshot](./screenshots/bidding.jpg)
+![Screenshot](./screenshots/bidding1.jpg)
+![Screenshot](./screenshots/bidding2.jpg)
+![Screenshot](./screenshots/logincustomer.jpg)
+![Screenshot](./screenshots/loginserviceprovider.jpg)
+![Screenshot](./screenshots/orderhistory.jpg)
+![Screenshot](./screenshots/place%20order.jpg)
+![Screenshot](./screenshots/profile.jpg)
+![Screenshot](./screenshots/selectdate.jpg)
+
+
+
+
+
+
+
 ## 🌟 Features
 
 ### 🔍 For Customers:
